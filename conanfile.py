@@ -123,5 +123,5 @@ class ArcusConan(ConanFile):
         self.cpp_info.libs = ["Arcus"]
         if self.settings.os in ["Linux", "FreeBSD"]:
             self.cpp_info.system_libs.append("pthread")
-        if self.settings.os == "Windows":
+        elif self.settings.os == "Windows":
             self.cpp_info.system_libs.append("ws2_32")
